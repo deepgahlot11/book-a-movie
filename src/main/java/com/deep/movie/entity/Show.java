@@ -1,8 +1,10 @@
 package com.deep.movie.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -12,6 +14,8 @@ import java.time.LocalTime;
 @Table(name = "show", uniqueConstraints = @UniqueConstraint(name = "uk_audi_id_date_show_time", columnNames = {"auditorium_id", "show_date", "show_time"}))
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Show {
 
     @Id

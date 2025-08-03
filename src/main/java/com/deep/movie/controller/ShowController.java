@@ -21,7 +21,7 @@ public class ShowController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Long createShow(@Valid CreateShowRequest createShowRequest) {
+    public Long createShow(@RequestBody @Valid CreateShowRequest createShowRequest) {
         return showService.createShow(createShowRequest);
     }
 
@@ -36,7 +36,7 @@ public class ShowController {
     }
 
     @PutMapping("/{id}")
-    public void updateShow(@PathVariable Long id, UpdateShowRequest updateShowRequest) {
+    public void updateShow(@PathVariable Long id, @RequestBody UpdateShowRequest updateShowRequest) {
         showService.updateShow(id, updateShowRequest);
     }
 
