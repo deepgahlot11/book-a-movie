@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: book-a-movie
+
+  server:
+    port: 8080
+
+  datasource:
+    url: jdbc:postgresql://localhost:5436/bookamovie
+    username: movie_user
+    password: movie_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # create-drop, create, update, validate, none
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
