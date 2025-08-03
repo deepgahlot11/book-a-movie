@@ -27,4 +27,7 @@ public class Auditorium {
 
     @Column(name = "active", nullable = false)
     private Boolean active;
+
+    @Version
+    private Long version;
 }

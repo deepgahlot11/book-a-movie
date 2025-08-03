@@ -37,4 +37,7 @@ public class Show {
 
     @Column(name = "active")
     private Boolean active;
+
+    @Version
+    private Long version;
 }

@@ -24,4 +24,7 @@ public class Seat {
 
     @Column(name = "active", nullable = false)
     private Boolean active;
+
+    @Version
+    private Long version;
 }

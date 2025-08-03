@@ -33,4 +33,7 @@ public class User {
 
     @Column(name = "guest", nullable = false)
     private Boolean guest;
+
+    @Version
+    private Long version;
 }

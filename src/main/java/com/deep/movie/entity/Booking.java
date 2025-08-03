@@ -24,4 +24,7 @@ public class Booking {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private BookingStatus bookingStatus;
+
+    @Version
+    private Long version;
 }

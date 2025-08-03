@@ -20,4 +20,7 @@ public class Movie {
 
     @Column(name = "active")
     private Boolean active;
+
+    @Version
+    private Long version;
 }

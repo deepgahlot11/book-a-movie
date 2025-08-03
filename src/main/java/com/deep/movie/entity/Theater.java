@@ -28,4 +28,7 @@ public class Theater {
     @Column(name = "active", nullable = false)
     private Boolean active;
 
+    @Version
+    private Long version;
+
 }

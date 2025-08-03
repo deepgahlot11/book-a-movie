@@ -17,4 +17,7 @@ public class City {
     @Column(name = "city_name", nullable = false, unique = true, length = 100)
     private String cityName;
 
+    @Version
+    private Long version;
+
 }

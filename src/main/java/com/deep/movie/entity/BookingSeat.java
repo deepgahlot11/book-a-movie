@@ -19,4 +19,7 @@ public class BookingSeat {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "show_seat_id", nullable = false, foreignKey = @ForeignKey(name = "fk_showseat_booking_showseat"))
     private ShowSeat showSeat;
+
+    @Version
+    private Long version;
 }

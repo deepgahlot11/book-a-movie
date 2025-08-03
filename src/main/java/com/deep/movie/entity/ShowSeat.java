@@ -24,4 +24,7 @@ public class ShowSeat {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private SeatStatus seatStatus = SeatStatus.AVAILABLE;
+
+    @Version
+    private Long version;
 }
