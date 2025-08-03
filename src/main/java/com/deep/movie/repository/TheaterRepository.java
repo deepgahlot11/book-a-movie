@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface TheaterRepository extends JpaRepository<Theater, Long> {
 
-    @Query("SELECT DISTINCT t FROM Theater t JOIN t.auditoriums a JOIN Show s ON s.auditorium = a WHERE t.city.id = :cityId AND s.movie.id = :movieId AND s.showDate = :showDate")
+    @Query("SELECT DISTINCT t FROM Theater t JOIN Auditorium a ON a.theater = t JOIN Show s ON s.auditorium = a WHERE t.city.id = :cityId AND s.movie.id = :movieId AND s.showDate = :showDate")
     List<Theater> getTheatersByCityMovieAndDate(Long cityId, Long movieId, LocalDate showDate);
 
 }
